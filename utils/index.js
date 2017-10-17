@@ -1,4 +1,5 @@
 const pick = require("lodash/pick");
+const flickrBaseUrl = 'https://www.flickr.com/photos'
 
 const getEntryFromData = data => data.feed.entry;
 
@@ -22,6 +23,14 @@ const mapEntry = records => {
   });
 };
 
+// https://www.flickr.com/photos/{user-id}/{photo-id}
+
+const mapPhotoResult = result => {
+  return result.photos.photo.map(p => {
+    return `${flickrBaseUrl}/${p.owner}/${p.id}`;
+  });
+}
+
 module.exports = {
-  getEntryFromData, mapCategories, cutString, mapEntry
+  getEntryFromData, mapCategories, cutString, mapEntry, mapPhotoResult
 }
