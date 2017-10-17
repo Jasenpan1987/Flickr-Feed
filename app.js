@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const route = require("./routes");
 const app = express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // use bodyParser for incomming request
 
-route(app);
+route(app); // map to route
 
 const PORT = process.env.PORT || 5000;
 
