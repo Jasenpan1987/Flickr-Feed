@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 function getPluginsByEnv(env) {
   if(env.production) {
@@ -16,8 +15,7 @@ function getPluginsByEnv(env) {
         output: { comments: false },
         mangle: false,
         compress: { warnings: false }
-      }),
-      new HtmlWebpackPlugin()
+      })
     ]
   }
 }
