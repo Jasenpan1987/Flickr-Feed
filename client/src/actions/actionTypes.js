@@ -1,0 +1,3 @@
+export const FETCH_FEED = 'FETCH_FEED';
+export const FETCH_FEED_SUCCESS = 'FETCH_FEED_SUCCESS';
+export const FETCH_FEED_FAILED = 'FETCH_FEED_FAILED';

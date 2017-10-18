@@ -23,14 +23,7 @@ const mapEntry = records => {
   });
 };
 
-// https://www.flickr.com/photos/{user-id}/{photo-id}
-
-const mapPhotoResult = result => {
-  return result.photos.photo.map(p => {
-    return `${flickrBaseUrl}/${p.owner}/${p.id}`;
-  });
-}
 
 module.exports = {
-  getEntryFromData, mapCategories, cutString, mapEntry, mapPhotoResult
+  getEntryFromData, mapCategories, cutString, mapEntry
 }

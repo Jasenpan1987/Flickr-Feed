@@ -13,7 +13,7 @@ const CoreLayoutComponent = ({ children }) => (
 );
 
 CoreLayoutComponent.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.array.isRequired
 }
 
 export const CoreLayout = CoreLayoutComponent;
